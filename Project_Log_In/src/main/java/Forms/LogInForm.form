@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="LogInForm">
+  <grid id="27dc6" binding="LogInForm" layout-manager="GridLayoutManager" row-count="7" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="524" height="524"/>
+    </constraints>
+    <properties>
+      <background color="-2039584"/>
+      <doubleBuffered value="false"/>
+      <focusCycleRoot value="true"/>
+      <maximumSize width="1047483647" height="1047483647"/>
+      <minimumSize width="224" height="224"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <vspacer id="6e9fc">
+        <constraints>
+          <grid row="5" column="9" row-span="2" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="66fa9" class="javax.swing.JPasswordField" binding="PasswordField">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="3dc21" class="javax.swing.JLabel" binding="PasswordLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Source Code Pro" size="16" style="2"/>
+          <text value="Password"/>
+        </properties>
+      </component>
+      <component id="521c9" class="javax.swing.JTextField" binding="NameField">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="4" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="e7160" class="javax.swing.JLabel" binding="NameLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Source Code Pro" size="16" style="2"/>
+          <text value="Name / Email"/>
+        </properties>
+      </component>
+      <component id="face4" class="javax.swing.JButton" binding="NewAccountButton">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Source Code Pro" size="16" style="2"/>
+          <label value="Create a new account"/>
+          <text value="Create a new account"/>
+        </properties>
+      </component>
+      <component id="e8b3c" class="javax.swing.JButton" binding="logInButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Source Code Pro" size="16" style="2"/>
+          <text value="Log In"/>
+        </properties>
+      </component>
+      <component id="d3925" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusable value="false"/>
+          <icon value="unlock.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="fa279" class="javax.swing.JLabel" binding="LogInLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Source Code Pro" size="20" style="3"/>
+          <text value="Log In"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
