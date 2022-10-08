@@ -54,7 +54,7 @@ public class RegistrationForm extends JDialog {
         String password = String.valueOf(pfPassword.getPassword());
         String confirmPassword = String.valueOf(pfConfirmPassword.getPassword());
 
-        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty() || cbTerms.isSelected()) {
             JOptionPane.showMessageDialog(this,
                     "Please enter all fields",
                     "Try again",
