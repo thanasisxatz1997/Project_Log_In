@@ -1,6 +1,9 @@
 package Forms;
 
 import Managers.DataManager;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 
 import javax.swing.*;
 import java.awt.*;
@@ -76,6 +79,8 @@ public class RegistrationForm extends JDialog {
                         "User Registered successfully",
                         "Done!",
                         JOptionPane.ERROR_MESSAGE);
+
+                Document loginDoc = new Document("_id","1").append("name", name).append("email", email).append("password", password);
             }
             else
             {
@@ -84,6 +89,8 @@ public class RegistrationForm extends JDialog {
                         "Try again!",
                         JOptionPane.ERROR_MESSAGE);
             }
+
+
 
         }
 

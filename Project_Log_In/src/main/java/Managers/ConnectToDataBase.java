@@ -16,16 +16,16 @@ public class ConnectToDataBase {
     public ConnectToDataBase()
     {
         System.out.println("DONE");
-        connectionString = new ConnectionString("mongodb+srv://thanasisxatz1997:freeewebb199714@cluster0.szzo30f.mongodb.net/?retryWrites=true&w=majority");
+        connectionString = new ConnectionString("mongodb+srv://root:root@loginformdb.sbptfd0.mongodb.net/?retryWrites=true&w=majority");
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .serverApi(ServerApi.builder()
                         .version(ServerApiVersion.V1)
                         .build())
                 .build();
-        MongoClient mongoClient = MongoClients.create(settings);
-        MongoDatabase database = mongoClient.getDatabase("TestDatabase");
-        MongoCollection coll= database.getCollection("TestCollection");
+        MongoClient client = MongoClients.create(settings);
+        MongoDatabase db = client.getDatabase("Project_Log_In");
+        MongoCollection coll= db.getCollection("User");
         DataManager.DbCollection= coll;
         if(coll!=null)
         {
