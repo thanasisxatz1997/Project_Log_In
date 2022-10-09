@@ -70,6 +70,20 @@ public class RegistrationForm extends JDialog {
         pfConfirmPassword.setText("");
     }
 
+    private boolean  ValidEmailAddress(String email)
+    {
+        if(email.matches(("^[A-Za-z0-9+_.-]+@(.+)$")))
+        {
+            System.out.println("Email valid");
+            return true;
+        }
+        else
+        {
+            System.out.println("Email NOT valid");
+            return false;
+        }
+    }
+
     private void registerUser() {
         String name = tfUsername.getText();
         String email = tfEmail.getText();
@@ -84,6 +98,13 @@ public class RegistrationForm extends JDialog {
             ClearFields();
 
             return;
+        }
+        else if(!ValidEmailAddress(email))
+        {
+            JOptionPane.showMessageDialog(this,
+                    "Incorrect Email Address",
+                    "Try again",
+                    JOptionPane.ERROR_MESSAGE);
         }
         else if (!password.equals(confirmPassword)) {
             JOptionPane.showMessageDialog(this,
@@ -102,7 +123,7 @@ public class RegistrationForm extends JDialog {
                         "Done!",
                         JOptionPane.ERROR_MESSAGE);
                 this.dispose();
-                new LogInForm();
+                new LoginPage();
             }
             else
             {
