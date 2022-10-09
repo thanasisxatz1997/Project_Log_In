@@ -19,12 +19,26 @@ public class RegistrationForm extends JDialog {
     private JButton btnCancel;
     private JPanel registerPanel;
     private JPasswordField pfConfirmPassword;
+    private JLabel imageLabel;
+    private JLabel nameLabel;
+    private JLabel emailLabel;
+    private JLabel passwordLabel;
+    private JLabel passowrdConfirmLabel;
+    private ImageIcon labelIcon=new ImageIcon();
 
     public RegistrationForm(JFrame parent) {
         super(parent);
+        registerPanel.setBackground(new Color(60,63,65));
+        setSize(630,410);
+        nameLabel.setIcon(new ImageIcon("user_resized.png"));
+        passwordLabel.setIcon(new ImageIcon("password_resized.png"));
+        passowrdConfirmLabel.setIcon(new ImageIcon("password_resized.png"));
+        emailLabel.setIcon(new ImageIcon("email_resized.png"));
+        imageLabel.setIcon(new ImageIcon("ProjectBankIcon.png"));
+        setDefaultLookAndFeelDecorated(true);
         setTitle("Create a new account");
         setContentPane(registerPanel);
-        setMinimumSize(new Dimension(450, 474));
+        setMinimumSize(new Dimension(50, 474));
         setModal(true);
         setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -40,12 +54,20 @@ public class RegistrationForm extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                new LogInForm();
+                new LoginPage();
 
             }
         });
 
         setVisible(true);
+    }
+
+    private void ClearFields()
+    {
+        tfUsername.setText("");
+        tfEmail.setText("");
+        pfPassword.setText("");
+        pfConfirmPassword.setText("");
     }
 
     private void registerUser() {
@@ -54,11 +76,13 @@ public class RegistrationForm extends JDialog {
         String password = String.valueOf(pfPassword.getPassword());
         String confirmPassword = String.valueOf(pfConfirmPassword.getPassword());
 
-        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
             JOptionPane.showMessageDialog(this,
                     "Please enter all fields",
                     "Try again",
                     JOptionPane.ERROR_MESSAGE);
+            ClearFields();
+
             return;
         }
         else if (!password.equals(confirmPassword)) {
@@ -66,6 +90,7 @@ public class RegistrationForm extends JDialog {
                     "Password does not match",
                     "Try again",
                     JOptionPane.ERROR_MESSAGE);
+            ClearFields();
             return;
         }
         else
@@ -76,6 +101,8 @@ public class RegistrationForm extends JDialog {
                         "User Registered successfully",
                         "Done!",
                         JOptionPane.ERROR_MESSAGE);
+                this.dispose();
+                new LogInForm();
             }
             else
             {

@@ -16,7 +16,7 @@ public class ConnectToDataBase {
     public ConnectToDataBase()
     {
         System.out.println("DONE");
-        connectionString = new ConnectionString("mongodb+srv://thanasisxatz1997:freeewebb199714@cluster0.szzo30f.mongodb.net/?retryWrites=true&w=majority");
+        connectionString = new ConnectionString("mongodb+srv://Administrator:projectadmin2022@cluster0.szzo30f.mongodb.net/?retryWrites=true&w=majority");
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .serverApi(ServerApi.builder()
