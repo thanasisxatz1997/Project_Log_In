@@ -1,6 +1,7 @@
 package Forms;
 
 import Managers.DataManager;
+import Managers.SendEmail;
 
 import javax.swing.*;
 import java.awt.*;
@@ -122,6 +123,7 @@ public class RegistrationForm extends JDialog {
                         "User Registered successfully",
                         "Done!",
                         JOptionPane.ERROR_MESSAGE);
+                SendEmail.SendEmail(email);
                 this.dispose();
                 new LoginPage();
             }
