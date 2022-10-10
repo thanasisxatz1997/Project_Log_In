@@ -80,7 +80,7 @@ public class RegistrationForm extends JDialog {
                         "Done!",
                         JOptionPane.ERROR_MESSAGE);
 
-                Document loginDoc = new Document("_id","1").append("name", name).append("email", email).append("password", password);
+
             }
             else
             {
