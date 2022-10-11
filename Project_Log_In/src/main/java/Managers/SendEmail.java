@@ -54,7 +54,7 @@ public class SendEmail {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
-            message.setSubject("This is the Subject Line!");
+            message.setSubject("WELCOME TO PROJECTBANK!");
 
             // Now set the actual message
             message.setText("Your account at LoginBank was created successfully!!");

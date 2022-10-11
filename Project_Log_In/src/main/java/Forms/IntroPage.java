@@ -19,7 +19,6 @@ public class IntroPage extends JFrame{
         frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         frame.setPreferredSize(new Dimension(450, 474));
         frame.setResizable(false);
-
         frame.add(panel1);
 
         frame.pack();

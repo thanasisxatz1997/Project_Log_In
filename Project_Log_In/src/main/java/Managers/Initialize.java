@@ -7,6 +7,7 @@ import javax.swing.*;
 
 public class Initialize {
     ConnectToDataBase DbConnection;
+    IntroPage startingForm;
     public Initialize()
     {
         DbConnection=new ConnectToDataBase();
@@ -22,10 +23,10 @@ public class Initialize {
         {
             System.out.println("Look  NOT Changed");
         }
-
-        IntroPage startingForm=new IntroPage();
+        startingForm=new IntroPage();
     }
     public static void main(String[] args) {
         new Initialize();
     }
+
 }

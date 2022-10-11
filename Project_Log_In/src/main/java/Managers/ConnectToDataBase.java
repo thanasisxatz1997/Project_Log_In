@@ -16,7 +16,7 @@ public class ConnectToDataBase {
     public ConnectToDataBase()
     {
         System.out.println("DONE");
-        connectionString = new ConnectionString("mongodb+srv://Administrator:projectadmin2022@cluster0.szzo30f.mongodb.net/?retryWrites=true&w=majority");
+        connectionString = new ConnectionString("mongodb+srv://admin:projectlogin2022@loginformdb.sbptfd0.mongodb.net/?retryWrites=true&w=majority");
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .serverApi(ServerApi.builder()
@@ -24,8 +24,8 @@ public class ConnectToDataBase {
                         .build())
                 .build();
         MongoClient mongoClient = MongoClients.create(settings);
-        MongoDatabase database = mongoClient.getDatabase("TestDatabase");
-        MongoCollection coll= database.getCollection("TestCollection");
+        MongoDatabase database = mongoClient.getDatabase("Project_Log_In");
+        MongoCollection coll= database.getCollection("User");
         DataManager.DbCollection= coll;
         if(coll!=null)
         {

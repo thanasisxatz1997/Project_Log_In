@@ -1,6 +1,7 @@
 package Forms;
 
 import Managers.DataManager;
+import Managers.Initialize;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,6 +42,9 @@ public class LoginPage extends JFrame{
                             "Log In Successful!",
                             "Welcome!",
                             JOptionPane.ERROR_MESSAGE);
+                    frame.dispose();
+
+                    new UserForm();
                     return;
                 }
                 else
